@@ -59,12 +59,12 @@ def process_webhook(data):
             print("Processing payment captured event...")  # Debug print
             payment_metadata = data['payload']['payment']['entity']['notes']  # Adjust based on Razorpay payload structure
             update_data = {
-                'Internship Period': payment_metadata.get('internship_period'),
+                'Internship Period': payment_metadata.get('amount'),
                 'Name': payment_metadata.get('name'),
                 'Email': payment_metadata.get('email'),
                 'Domain': payment_metadata.get('choose_internship'),
                 'Phone No': payment_metadata.get('phone'),
-                'Gender': payment_metadata.get('gender'),  # Adjust if gender is part of metadata
+                 # Adjust if gender is part of metadata
                 'Referred By': payment_metadata.get('referred_by'),
             }
             print("Update data prepared:", update_data)  # Debug print
