@@ -10,7 +10,7 @@ from datetime import datetime
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
 SHEET_NAME = 'Sheet1'  # Name of the sheet within the spreadsheet
 SERVICE_ACCOUNT_FILE = os.path.join(os.getcwd(), 'spreedsheet-423616-7b116f800da5.json')  # Correct path to your service account key file
-RAZORPAY_EVENT_NAME = 'payment.capture'  # Specific Razorpay event to listen for
+RAZORPAY_EVENT_NAME = 'payment.captured'  # Specific Razorpay event to listen for
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def append_to_next_available_row(sheet_service, data):
     # Find the next available row index
     response = sheet_service.spreadsheets().values().get(
         spreadsheetId=SPREADSHEET_ID,
-        range=f'{SHEET_NAME}!A:F',  # Assuming your data is in columns A to F
+        range=f'{SHEET_NAME}!A:G',  # Assuming your data is in columns A to G
     ).execute()
     values = response.get('values', [])
     next_row_index = len(values) + 1  # Index of the next available row
@@ -50,7 +50,7 @@ def append_to_next_available_row(sheet_service, data):
     }
     sheet_service.spreadsheets().values().append(
         spreadsheetId=SPREADSHEET_ID,
-        range=f'{SHEET_NAME}!A{next_row_index}:F{next_row_index}',  # Adjusted to column F to exclude the gender column
+        range=f'{SHEET_NAME}!A{next_row_index}:G{next_row_index}',  # Adjusted to column G to exclude the gender column
         valueInputOption='RAW',
         body=body
     ).execute()
