@@ -6,7 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Replace these with your details
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
 SHEET_NAME = 'Sheet1'  # Name of the sheet within the spreadsheet
-SERVICE_ACCOUNT_FILE = r"/spreedsheet-423616-72516d1ef538.json"  # Path to your service account key file
+SERVICE_ACCOUNT_FILE = '/spreedsheet-423616-72516d1ef538.json'  # Path to your service account key file
 RAZORPAY_EVENT_NAME = 'payment.captured'  # Specific Razorpay event to listen for
 
 # Configure Google Sheets API connection
@@ -31,16 +31,16 @@ def update_spreadsheet_row(sheet_service, data, row_index):
 
 # Function to process Razorpay webhook data
 def process_webhook(data):
-    if data['event'] == payment.captured:  # Check for specific event
+    if data['event'] == RAZORPAY_EVENT_NAME:  # Check for specific event
         # Extract relevant data from webhook payload (adjust based on your Razorpay data format)
-        row_index = data['payment']['metadata']['row_index']  # Assuming row index is stored in metadata
+        row_index = data['payment']['metadata'].get('row_index')  # Handle potential missing key
         update_data = {
-            'Internship Period': data['payment']['metadata']['amount'],
-            'Name': data['payment']['metadata']['Notes Name'],
-            'Email': data['payment']['metadata']['email'],
-            'Domain': data['payment']['metadata']['Notes Choose Internship'],
-            'Phone No': data['payment']['metadata']['Notes Phone'],
-            'Referred By': data['payment']['metadata']['Notes Referred by'],
+            'Internship Period': data['payment']['metadata'].get('amount'),  # Handle potential missing key
+            'Name': data['payment']['metadata'].get('Notes Name'),  # Handle potential missing key
+            'Email': data['payment']['metadata'].get('email'),  # Handle potential missing key
+            'Domain': data['payment']['metadata'].get('Notes Choose Internship'),  # Handle potential missing key
+            'Phone No': data['payment']['metadata'].get('Notes Phone'),  # Handle potential missing key
+            'Referred By': data['payment']['metadata'].get('Notes Referred by'),  # Handle potential missing key
         }
         sheet_service = get_google_sheets_service()
         update_spreadsheet_row(sheet_service, update_data, row_index)
