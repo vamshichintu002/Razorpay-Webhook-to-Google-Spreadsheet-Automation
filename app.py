@@ -3,11 +3,12 @@ from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client.service_account import ServiceAccountCredentials
 from flask import Flask, request
+import os
 
 # Replace these with your details
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
 SHEET_NAME = 'Sheet1'  # Name of the sheet within the spreadsheet
-SERVICE_ACCOUNT_FILE = '/spreedsheet-423616-72516d1ef538.json'  # Correct path to your service account key file
+SERVICE_ACCOUNT_FILE = os.path.join(os.getcwd(), 'spreedsheet-423616-72516d1ef538.json')  # Correct path to your service account key file  # Correct path to your service account key file
 RAZORPAY_EVENT_NAME = 'payment.captured'  # Specific Razorpay event to listen for
 
 app = Flask(__name__)
