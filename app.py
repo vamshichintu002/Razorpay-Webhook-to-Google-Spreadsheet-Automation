@@ -6,7 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Replace these with your details
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
 SHEET_NAME = 'Sheet1'  # Name of the sheet within the spreadsheet
-SERVICE_ACCOUNT_FILE = '/spreedsheet-423616-72516d1ef538.json'  # Path to your service account key file
+SERVICE_ACCOUNT_FILE = r'/spreedsheet-423616-72516d1ef538.json'  # Path to your service account key file
 RAZORPAY_EVENT_NAME = 'payment.captured'  # Specific Razorpay event to listen for
 
 # Configure Google Sheets API connection
