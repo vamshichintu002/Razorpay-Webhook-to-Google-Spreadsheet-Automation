@@ -44,6 +44,9 @@ def append_to_next_available_row(sheet_service, data):
         data.get('Referred By')
     ]
 
+    # Debugging print statements
+    print(f"Appending row data: {row_data}")
+
     # Append the data to the next available row
     body = {
         'values': [row_data]
@@ -61,9 +64,11 @@ def process_webhook(data):
     if data.get('event') == RAZORPAY_EVENT_NAME:  # Check for specific event
         try:
             print("Processing payment captured event...")  # Debug print
-            payment_metadata = data['payload']['payment']['entity']['notes']  # Adjust based on Razorpay payload structure
+            payment_entity = data['payload']['payment']['entity']
+            payment_metadata = payment_entity['notes']  # Adjust based on Razorpay payload structure
+
             update_data = {
-                'Amount': payment_metadata.get('amount'),
+                'Amount': payment_entity.get('amount'),  # Correctly fetching the amount
                 'Name': payment_metadata.get('name'),
                 'Email': payment_metadata.get('email'),
                 'Domain': payment_metadata.get('choose_internship'),
