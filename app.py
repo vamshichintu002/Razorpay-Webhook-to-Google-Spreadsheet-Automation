@@ -58,13 +58,14 @@ def handle_webhook(request):
         print("Invalid request method")
 
 # Example usage (replace with your server logic)
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/', methods=['POST'])
+def webhook():
+    handle_webhook(request)
+    return 'Webhook received'
+
 if __name__ == '__main__':
-    from flask import Flask, request
-
-    app = Flask(__name__)
-    app.route('/', methods=['POST'])
-    def webhook():
-        handle_webhook(request)
-        return 'Webhook received'
-
     app.run(debug=True)
