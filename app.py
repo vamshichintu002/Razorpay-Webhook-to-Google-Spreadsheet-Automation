@@ -24,19 +24,18 @@ def append_to_next_available_row(sheet_service, data):
     # Find the next available row index
     response = sheet_service.spreadsheets().values().get(
         spreadsheetId=SPREADSHEET_ID,
-        range=f'{SHEET_NAME}!A:G',  # Assuming your data is in columns A to G
+        range=f'{SHEET_NAME}!A:F',  # Assuming your data is in columns A to F
     ).execute()
     values = response.get('values', [])
     next_row_index = len(values) + 1  # Index of the next available row
 
     # Prepare the data to append
     row_data = [
-        data.get('Internship Period'),
+        data.get('Amount'),
         data.get('Name'),
         data.get('Email'),
         data.get('Domain'),
         data.get('Phone No'),
-        data.get('Gender'),
         data.get('Referred By')
     ]
 
