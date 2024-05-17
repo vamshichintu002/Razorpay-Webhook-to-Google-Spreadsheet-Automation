@@ -4,6 +4,7 @@ from httplib2 import Http
 from oauth2client.service_account import ServiceAccountCredentials
 from flask import Flask, request
 import os
+from datetime import datetime
 
 # Replace these with your details
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
@@ -24,13 +25,17 @@ def append_to_next_available_row(sheet_service, data):
     # Find the next available row index
     response = sheet_service.spreadsheets().values().get(
         spreadsheetId=SPREADSHEET_ID,
-        range=f'{SHEET_NAME}!A:F',  # Assuming your data is in columns A to F
+        range=f'{SHEET_NAME}!A:G',  # Assuming your data is in columns A to G
     ).execute()
     values = response.get('values', [])
     next_row_index = len(values) + 1  # Index of the next available row
 
+    # Get the current timestamp
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     # Prepare the data to append
     row_data = [
+        timestamp,  # Add the timestamp as the first column
         data.get('Amount'),
         data.get('Name'),
         data.get('Email'),
@@ -45,7 +50,7 @@ def append_to_next_available_row(sheet_service, data):
     }
     sheet_service.spreadsheets().values().append(
         spreadsheetId=SPREADSHEET_ID,
-        range=f'{SHEET_NAME}!A{next_row_index}:G{next_row_index}',
+        range=f'{SHEET_NAME}!A{next_row_index}:H{next_row_index}',  # Adjusted to column H to include the timestamp
         valueInputOption='RAW',
         body=body
     ).execute()
@@ -53,17 +58,16 @@ def append_to_next_available_row(sheet_service, data):
 # Function to process Razorpay webhook data
 def process_webhook(data):
     print("Webhook data received:", data)  # Debug print
-    if data.get('event') == RAZORPAY_EVENT_NAME:  # Check for specific event
+    if data.get('event') == payment.capture:  # Check for specific event
         try:
             print("Processing payment captured event...")  # Debug print
             payment_metadata = data['payload']['payment']['entity']['notes']  # Adjust based on Razorpay payload structure
             update_data = {
-                'Internship Period': payment_metadata.get('amount'),
+                'Amount': payment_metadata.get('amount'),
                 'Name': payment_metadata.get('name'),
                 'Email': payment_metadata.get('email'),
                 'Domain': payment_metadata.get('choose_internship'),
                 'Phone No': payment_metadata.get('phone'),
-                 # Adjust if gender is part of metadata
                 'Referred By': payment_metadata.get('referred_by'),
             }
             print("Update data prepared:", update_data)  # Debug print
