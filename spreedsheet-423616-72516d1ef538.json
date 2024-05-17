@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "spreedsheet-423616",
+  "private_key_id": "72516d1ef5387148ae26323ac1529995c1a15a3f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDaV/UpSl8SOn/9\nu8J9QAizhWyysrkDeuazeC/Qa1eUxa8LvzS5U6qh0x0A3K+5N6OXk8am5NlGnwYR\nTCJ7M7UH1lUUE1Fr/yDzg7r0518PSdiX3kFJEXFSyMoeQSkad9XBmYGCxB5EKbGD\nNqV7MpR82f8JlMMjtAT7y4rVu3ZKJVGoI0/aiviPvy+6c8G+xbXHT9fBE0cg58dG\nE/mtA1jr+3Ot2HcQB7wToFWN6c2xQusJ6TXBBHNkK+9j2O3hZWpcRfzZhZi4oERR\nsOZESdwCtDCWIKzRWVYaHfm+zbFO+9Akp3TuNJQAFgYqAzcwIhQ5IVFGCRnOghOb\n+q+AGcnDAgMBAAECggEAAQw8AnM3apR6ScLtZ4F3qTjiMSdXaPNdiQ3yGMtzE6Ux\nNlq4C42hu34SXQ8yDq78K32LjgB6JHMd6dZWMgYo/70hEmQXV2/VfiWrL4Kuu5mM\nnwnzgUDCrPWGtsd0RYq+rVupufFr/cK/ddQ8zg8LlF/NcAPVPeYewgCTjXwFUMzD\nxsStRYQT4yDgTuYeSI1VeH/I3zHi8f3ShVt+12hymwYnlEY7Qx8iR0597aXgn2KI\nJlGrJ1wW1pDpVXmo/4tEMGU6hGtxXkT1lF7zEoqE9by7eEVNcqXLZV3PDeUSsuGn\n/Lv4z0NmA6h2ZFiplC/SaPUMYQtZNVtB4b+ce64/TQKBgQD1LkQ6mkzJx7SuVWiK\nVKFHo3QE2D8idzTjWbNaYhDqRHRlNIrna3Lf7qcWG3IerHlw1SNjPPvafdZRazUz\n8YIIktCwhjeUMMutjnROKTMX6H5va/DX4Ab3BonuSezwHEsOpCPzUqPvfs0ERCcJ\nORWGDXBKcUbY7PwXouOWb8ycdwKBgQDj+oUayr53Dwz/vwyyMEDmvx99dQgf4NUR\nXEmrLJgRebt5kkilvX4mRBeUzWK06PxS2VjFD9eYxfqIFfK0et1+jUo6TALlbRvv\noDYg3SajVXmN4YUfdp5xqtBYNoEI3b8biYA276TENGHLG/I32wwRz1ZmZkcimLL3\nfca7N5esFQKBgH9nPk8RdQt5OdtJSFxxY6k9N4F4+T2oohPtvbQet1l0nuMkLXXZ\nsMTKV4q2UlO8HhLSvmPIAbtknmSKiAfo3EAmQkkoRWM9A+m415jx8bnftyug9HLI\n1/WvMSdgxL10hlAiXQgIjmVaB6DK5Vn2jses3gfg2wbIBqslmovGppU7AoGAI/jy\nqcCV/ylTzsLxmOg+RWqg6GXgC0+prxyVzzmxIQjJSSyI5AYbcqRJ6EPkMFGXBuee\ntzGBvmx21KRJ8Kp2arKWpM47osHtp4jrIZJjt2AUVwvfupA3/g2K5HBtOd3resfe\ngEyd/guZ5reZJ7EbnW/O3UeEL/RSQPUKt53VA+UCgYEAiNREQeMEhUP0HRYwgqYd\npx8T9qcUrBjoOaQWI9A6Y398jooUZfLBtrE8eG9lI/v2NkGZKdXjAQgkNhdJKa+V\nGbNzXxbEOmbB5mh+qWsDCMtZz98kOusC/9LwAVcHtVgwmUEtt/dU1u/a3m65ngur\n0XGosIdnJB6E7k01Tku9dMU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "devtern-service@spreedsheet-423616.iam.gserviceaccount.com",
+  "client_id": "106434565671435353827",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/devtern-service%40spreedsheet-423616.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
