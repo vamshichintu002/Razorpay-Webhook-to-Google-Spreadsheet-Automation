@@ -45,8 +45,8 @@ def append_to_next_available_row(sheet_service, data):
         data.get('Email'),
         data.get('Domain'),
         data.get('Phone No'),
-        data.get('Referred By')
-        data.get('Year')
+        data.get('Referred By'),
+        data.get('Year'),
     ]
 
     # Debugging print statements
