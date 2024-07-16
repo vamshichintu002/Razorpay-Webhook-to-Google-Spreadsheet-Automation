@@ -47,6 +47,7 @@ def append_to_next_available_row(sheet_service, data):
         data.get('Phone No'),
         data.get('Referred By'),
         data.get('Year'),
+        data.get('College Name'),
     ]
 
     # Debugging print statements
@@ -80,6 +81,7 @@ def process_webhook(data):
                 'Phone No': payment_metadata.get('phone'),
                 'Referred By': payment_metadata.get('referred_by'),
                 'Year': payment_metadata.get('i_am_currently_in'),
+                'College Name' : payment_metadata.get('college_name'),
             }
             print("Update data prepared:", update_data)  # Debug print
             sheet_service = get_google_sheets_service()
