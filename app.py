@@ -5,6 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from flask import Flask, request
 import os
 from datetime import datetime
+import pytz
 
 # Replace these with your details
 SPREADSHEET_ID = '1dzFr-m5fv3F_f4R9-LJ06w7sd7Tmkw8Oy9XJTLmJvmA'  # ID of your Google Sheet
@@ -31,6 +32,9 @@ def append_to_next_available_row(sheet_service, data):
     next_row_index = len(values) + 1  # Index of the next available row
 
     # Get the current timestamp
+    # Get the current timestamp in IST
+    ist_timezone = pytz.timezone('Asia/Kolkata')
+    timestamp = datetime.now(ist_timezone).strftime('%Y-%m-%d %H:%M:%S')
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     # Prepare the data to append
@@ -42,6 +46,7 @@ def append_to_next_available_row(sheet_service, data):
         data.get('Domain'),
         data.get('Phone No'),
         data.get('Referred By')
+        data.get('Year')
     ]
 
     # Debugging print statements
@@ -74,6 +79,7 @@ def process_webhook(data):
                 'Domain': payment_metadata.get('choose_internship'),
                 'Phone No': payment_metadata.get('phone'),
                 'Referred By': payment_metadata.get('referred_by'),
+                'Year': payment_metadata.get('i_am_currently_in'),
             }
             print("Update data prepared:", update_data)  # Debug print
             sheet_service = get_google_sheets_service()
