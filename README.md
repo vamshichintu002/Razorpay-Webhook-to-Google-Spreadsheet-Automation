@@ -1,7 +1,3 @@
-Sure! Here's a draft for your `README.md` file:
-
----
-
 # Spreedsheet
 
 This repository contains a Python application designed to manage and manipulate spreadsheets. The application includes functionalities for adding college names and handling time zone changes.
