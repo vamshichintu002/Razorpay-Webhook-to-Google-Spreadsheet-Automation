@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "spreedsheet-423616",
-  "private_key_id": "7b116f800da5c6bd4046ffde30bed32f525f0f9a",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCoLrmtbTMAXIfi\ngdYxcz1dsZxagKoTjwQp3cg9wVHtV3So45P6PS+tnsRajZK9e2Vao9RldTed6D2S\nmm3GuF5z8yhgYWwJ8FbApdyQvagYfo1i/Tn5mmI3eZGh9D2wxof5IZDbqaxe+Fa5\nVlW6K06VImCcMv4QPmDwu77NIF9ZmoRnofolDw4WEENSlPtRqVRFEMaCXty1sZwD\nfi/lPhAbC8cKRaXJRuTbzqfLOfg5mqxBoh8wSIzvlMRUdmOeksvKNjZWTvCA+Bzn\nTa2/Hj4jcuqzHH+m7uxVxjNNJLHlab5vEJkSqmd3okW3UBtkT9rkDhceHdb2NDGA\nbtPV4xZzAgMBAAECggEAMwojHWejb7ulHW+LwmwXtoR9T9X2R4NCnzYIW/18UIwX\nAl42fV3uR0GEk3qditWU98H6ZmQBYfGmJgSpxgIT4BpuKXnHYOjIWyS64E4+Ylid\nrentmztoDS/eq4jE5A4MG+Y84P0IK7YwE4UI9TvJWGcbbKvpAKL9pnFDwVrOtRE5\nkeX84lRl9XMoplrDGXTifnXmC3RKICMfmwK1ShofboL+/WuBjWgx7WdwaztvKDo8\n73rOleo4cnHeuE/YHZC1hy6VHyMJe7AUXN63G2ffKWm0uEciXp541De8o8E3XZ5x\n4fS2hU+NiWnPsv1jvooj5nqbPPTY/tTfovEAohWDwQKBgQDsfmR5y3nwu4lZKLpj\nzUy9sWT7oM2LRAFyUQd0HAC9UeeDbJP4xMQjWtoKvlkyKsJu1zfdC/UY+pt6c4DW\nRPS6d/glwgITdzhOnhpZFRywopjr/xhGOR7QCcevvmV1YNlPg8fvDMKh3i4klkbG\natNLKVN8LDSSyduc8SA5O/ZM4QKBgQC2De31bKeBFV4FV2NBQ0IWJ3Fmsryv+rON\nJypCrmJpeEpommfLTiN9dSXPdYZSMZRhLRlPHrDX67pe8msgkXtTkmsCBnsQXCux\ni2+YVy27q2SyIZfJefPmdaokujc47ccazJCfSblYuGr2p+b392puy9qyh/PSTcMP\nR0h7ipfZ0wKBgFllCYv0e1qhOTDnsVUqdJi75qUrSqcbBMT2li+wqiLmQ/Is595A\nWrfWjtdCzqqk+Sw21FoNPA++I2ltIcVc+XlHAhkbtfcvuKwXHXSRA3BNdiq3GbDp\nxJj1KXNoMCfnfR2OfdQB6cyQFLclywkTtl0R+QnWF+VowkgX6YtY/ChhAoGAbtOc\nAMPcVKCFVAsWySwAlyv7xOEaLKcZltw4xc8S6dHoujUE6qbuw/kEw35v/qlgAqhJ\nt/ie/1LpadN5k6H8yatgqSL418TEdJjFnp+zn4N/EVGR7XzoFWub4C/cXjOh+ZZ+\nk/l1c6UQuIcN+/YKPNiskfJhY60jCbIDVfHQ7zECgYBtnd/BHDE5wMBYKu+FCYSd\nGrDoemPLLFlM93U+J7I8or64E/BPAs6lZISbguJ3T2dkv+bCIegRSiSMjBXP795q\nbOtvFq8bQ5mXCfa92xpCsebd/+4OGIwmAh0sykfjXJRpmUMKHdGD7Iw/yta6PIof\nFMrrLuxG2DZzzFNWANgv8g==\n-----END PRIVATE KEY-----\n",
-  "client_email": "devtern-service@spreedsheet-423616.iam.gserviceaccount.com",
-  "client_id": "106434565671435353827",
+  "project_id": "spreedsheet-xxxxxx",
+  "private_key_id": "xxxxxxxxxxxxxxxxxxxxxx",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n[REDACTED]\n-----END PRIVATE KEY-----\n",
+  "client_email": "emailid@spreedsheet-xxxxxx.iam.gserviceaccount.com",
+  "client_id": "xxxxxxxxxxxxxxxxxxxx",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/devtern-service%40spreedsheet-423616.iam.gserviceaccount.com",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/devtern-service%40spreedsheet-xxxxxx.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
 }
